@@ -1,0 +1,10 @@
+[build]
+  command = "mkdir -p dashboard && tar -xzf soares-source.tar.gz -C dashboard && cd dashboard && corepack pnpm install --frozen-lockfile && npm run build"
+  publish = "dashboard/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NETLIFY = "true"
+
+[functions]
+  directory = "dashboard/.netlify/functions-internal"
