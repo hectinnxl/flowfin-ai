@@ -1,5 +1,5 @@
 [build]
-  command = "mkdir -p dashboard && tar --exclude='./README.md' --exclude='./src/test' -xzf soares-source.tar.gz -C dashboard && sed -i 's/NETLIFY/SOARES_NETLIFY_RUNTIME/g' dashboard/src/lib/admin-store.server.ts && cd dashboard && corepack pnpm install --frozen-lockfile && npm run build"
+  command = "mkdir -p dashboard && tar -xzf soares-source-roles.tar.gz -C dashboard && cd dashboard && corepack pnpm install --frozen-lockfile && npm run build"
   publish = "dashboard/dist"
 
 [build.environment]
